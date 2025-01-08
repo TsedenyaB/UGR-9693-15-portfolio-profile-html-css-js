@@ -5,12 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const dropdownMenu = document.querySelector('nav.dropdown');
+
+            menuToggle.addEventListener('click', () => {
+                dropdownMenu.classList.toggle('visible');
+            });
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) {
+                    dropdownMenu.classList.remove('visible');
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
     <header>
-        <img src="images/icons8-person-female-50.png" alt="logo" id="logo">
-        <nav>
+        <nav class="desktop-nav">
+            <img src="images/Woman (1).png" alt="Logo" class="logo">
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
@@ -21,24 +43,31 @@
         </nav>
     </header>
 
-    <main id="home">
-        <section id="intro">
-            <h1>Tsedenya Bazezew</h1>
-            <p>A third year software engineering student at Addis Ababa University</p>
+    <main class="home">
+        <section class="intro">
+            <div class="name">
+                <h1>Tsedenya Bazezew</h1>
+                <p>A third year software engineering student <br> at Addis Ababa University</p>
+            </div>
+            <div class="profile-img">
+                <img src="images/profile.jpg" alt="">
+            </div>
         </section>
         <div class="section1">
             <article class="box">
-                <img src="images/image-about.jpg" alt="" class="image" style="width: 100px; height: 100px;">
+                <img src="images/image-about.jpg" alt="" class="image">
                 <h3>About Me</h3>
                 <p class="description">Hello! I'm Tsedenya Bazezew, a passionate Software Engineering student
                     currently in my third year at Addis Ababa University.This portfolio showcases my work, skills,
                     and the projects I've been involved in so far. I'm always eager to take on new challenges and
                     learn from the experiences along the way. </p>
-                <a href="about.html" class="btn">View</a>
+                <div class="btn-holder">
+                    <a href="about.html" class="btn">View</a>
+                </div>
             </article>
 
             <article class="box">
-                <img src="images/image-team.jpg" alt="" class="image" style="width: 100px; height: 100px;">
+                <img src="images/image-team.jpg" alt="" class="image">
                 <h3>Service</h3>
                 <p class="description">I offer a range of services designed to help businesses and individuals bring
                     their ideas to life through technology. Whether you need a custom web application, help with
@@ -46,18 +75,22 @@
                     deliver. I focus on building efficient, user-friendly solutions that meet your unique needs.
                     Click below to learn more about the services I can provide!
                 </p>
-                <a href="service.html" class="btn">View</a>
+                <div class="btn-holder">
+                    <a href="service.html" class="btn">View</a>
+                </div>
             </article>
 
             <article class="box">
-                <img src="images/image-blog.jpg" alt="" class="image" style="width: 100px; height: 100px;">
+                <img src="images/image-blog.jpg" alt="" class="image">
                 <h3>Blog</h3>
                 <p class="description">Welcome to my blog! Here, I share my insights on the latest trends in
                     software development, programming tips, and personal learning experiences. Whether you’re a
                     fellow developer, a tech enthusiast, or just curious about the world of coding, you’ll find
                     valuable content that helps you stay updated and grow your skills. Check out my latest posts
                     below and feel free to join the conversation!</p>
-                <a href="service.html" class="btn">View</a>
+                <div class="btn-holder">
+                    <a href="service.html" class="btn">View</a>
+                </div>
             </article>
 
         </div>
@@ -73,9 +106,9 @@
                 target="_blank"><img src="images/icons8-linkedin-48.png" alt="LinkedIn Logo"></a>
         </div>
         <p>All Rights Reserved. &copy;2024</p>
-        <img src="images/icons8-person-female-50.png" alt="Logo">
+        <img src="images/Woman (1).png" alt="Logo" class="logo">
     </footer>
-
+    <script src="script/index.js"></script>
 </body>
 
 </html>
