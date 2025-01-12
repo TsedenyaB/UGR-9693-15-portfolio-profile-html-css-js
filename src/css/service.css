@@ -1,0 +1,27 @@
+.box {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 400px;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.box.expanded {
+    max-height: 1000px;
+    padding: 1.5rem;
+}
+
+
+.box p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5rem;
+    /* Show only the first 3 lines (adjust as needed) */
+    line-height: 1.5rem;
+}
+
+.box.expanded p {
+    max-height: none;
+}

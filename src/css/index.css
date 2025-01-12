@@ -1,25 +1,50 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Nunito", serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #011B2F, #035695);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     color: white;
 }
 
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
 main {
-    padding: 20px 80px;
+    padding: 3rem 5%;
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
+    height: 3rem;
+    width: 3rem;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 1rem 5%;
 }
 
 .menu-icon {
@@ -28,16 +53,16 @@ nav {
 }
 
 .menu-icon div {
-    width: 25px;
-    height: 3px;
+    width: 1.5rem;
+    height: 0.2rem;
     background-color: white;
-    margin: 5px 0;
+    margin: 0.3rem 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     margin: 0;
 }
 
@@ -48,80 +73,122 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li a.active {
+    color: #ffc107;
 }
 
 nav ul li a:hover {
     color: #f0c500;
 }
 
-.intro {
-    padding: 60px 20px;
-    display: flex;
-    justify-content: space-between;
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f0c500;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
 }
 
 .name {
     text-align: center;
-    margin-top: 60px;
-    margin-left: 60px;
+    margin-top: 3rem;
+    margin-left: 3%;
 }
 
-.intro h1 {
-    font-size: 2.5rem;
-    color: #ffc107;
-}
-
-.intro p {
-    font-size: 1.2rem;
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 5%;
+    gap: 2rem;
 }
 
 .intro .profile-img {
-    margin-right: 30px;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .intro .profile-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.intro .profile-img img:hover {
+    transform: scale(1.05);
+}
+
+.intro .name {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    color: #ffc107;
 }
 
 .section1 {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 40px;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .box {
     background-color: #6D7B82;
-    padding: 20px 20px 40px 20px;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 200px;
+    flex: 1 1 calc(33.33% - 2rem);
+    max-width: 18rem;
+    min-width: 12rem;
+    box-sizing: border-box;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
 }
 
 .box .image {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 10rem;
     object-fit: cover;
+    transition: transform 0.3s ease;
     border-radius: 10px;
 }
 
+.box .image:hover {
+    transform: scale(1.05);
+}
+
 .box h3 {
-    margin: 15px 0;
+    margin: 1rem 0;
 }
 
 .box p {
-    font-size: 1rem;
     line-height: 1.5;
-    color: #d0d8e1;
+    color: #ffffff;
 }
 
 .box .btn-holder {
@@ -131,42 +198,48 @@ nav ul li a:hover {
 }
 
 .btn {
-    background-color: #ffc107;
+    background-color: #FFD358;
     border: none;
     color: #0a1f44;
-    padding: 10px 20px;
+    padding: 0.5rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50px;
     text-decoration: none;
 }
 
-.box button:hover {
-    background-color: #ffca28;
+.btn:hover {
+    background-color: #ffc107;
 }
+
 
 footer {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    padding: 10px;
-    background-color: #0a1f44;
+    padding: 1rem;
+    background-color: #002A45;
     color: white;
-    margin-top: 40px;
+    margin-top: 2rem;
 }
 
 footer div {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin: 10px 0;
+    gap: 0.6rem;
+    margin: 0.6rem 0;
+}
+
+footer a img {
+    height: 2.5rem;
+    width: 2.5rem;
 }
 
 footer div a {
     color: white;
-    font-size: 1.5rem;
 }
+
 
 @media (max-width: 800px) {
     nav ul {
@@ -187,117 +260,5 @@ footer div a {
 
     .menu-icon {
         display: block;
-    }
-
-    .intro {
-        display: flex;
-        flex-direction: column;
-        margin: 40px 0 0;
-        font-weight: 800;
-        text-align: center;
-    }
-
-    .name {
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 30px 0;
-
-    }
-
-    .name h1 {
-        color: rgb(255, 185, 21);
-        font-size: 16px;
-    }
-
-    .name p {
-        color: rgb(255, 255, 255);
-        font-size: 15px;
-        margin: 14px 0;
-    }
-
-    .profile-img img {
-        object-fit: contain;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
-
-    .section1 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .box {
-        border-radius: 10px;
-        background-color: rgb(109, 123, 130);
-        display: flex;
-        margin: 60px 0 0;
-        padding: 10px 10px 20px 10px;
-        flex-direction: column;
-        align-items: center;
-        color: rgb(255, 255, 255);
-        text-align: center;
-        font: 700 10px Nunito, sans-serif;
-    }
-
-    .image {
-        aspect-ratio: 1.22;
-        object-fit: contain;
-        width: 100%;
-        border-radius: 11px;
-        align-self: stretch;
-    }
-
-    .box h3 {
-        font-size: 16px;
-        margin: 16px 0 0;
-        color: #ffca28;
-    }
-
-    .box p {
-        font-weight: 400;
-        margin: 20px 0 0;
-    }
-
-    footer {
-        display: flex;
-        margin: 20px 0 0;
-    }
-
-    footer div {
-        display: flex;
-        gap: 10px;
-        justify-content: space-between;
-        padding: 15px 42px;
-    }
-
-    footer a img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .logo {
-        aspect-ratio: 1;
-        object-fit: contain;
-        width: 25px;
-        height: 25px;
-    }
-
-    footer p {
-        display: flex;
-        text-align: center;
-        margin: auto 0;
-        font: 10px
-    }
-
-    .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
     }
 }

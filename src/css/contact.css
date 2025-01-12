@@ -1,43 +1,47 @@
-body {
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-    background: linear-gradient(to top, #0a47b0, #122a60);
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 80px;
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul a {
-    color: white;
-    text-decoration: none;
-}
-
-nav ul a:hover {
-    color: #ffc107;
-    text-decoration: none;
-}
-
-main h2 {
-    color: #ffc107;
-    font-weight: bold;
+.contact-section {
     text-align: center;
 }
 
+.contact-section h2 {
+    color: orange;
+    margin-bottom: 30px;
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .contacts {
-    width: 100px;
-    border: none;
+    background-color: #6D7B82;
+    color: black;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.contacts h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contacts p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.contacts .contact {
+    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contacts .contact p {
+    color: #0a0a39;
 }

@@ -5,23 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const dropdownMenu = document.querySelector('nav.dropdown');
-
-            menuToggle.addEventListener('click', () => {
-                dropdownMenu.classList.toggle('visible');
-            });
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 768) {
-                    dropdownMenu.classList.remove('visible');
-                }
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -34,11 +23,11 @@
                 <div></div>
             </div>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>

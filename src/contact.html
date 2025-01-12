@@ -5,48 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
     <header>
-        <img src="images/icons8-person-female-50.png" alt="logo" id="logo">
-        <nav>
+        <nav class="desktop-nav">
+            <img src="images/Woman (1).png" alt="Logo" class="logo">
+            <div class="menu-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="contact-section">
         <h2>Contact Me</h2>
-        <section class="contacts">
-            <div class="contact">
-                <h3>Email</h3>
-                <p>tsedenyabaze96@gmail.com</p>
-            </div>
-            <p>Feel free to reach out to me with any questions, opportunities, or collaborations. I'd be happy to
-                connect!</p>
-        </section>
-        <section class="contacts">
-            <div class="contact">
-                <h3>Phone Number</h3>
-                <p>0964860447</p>
-            </div>
-            <p>Feel free to call or message me for any inquiries, opportunities, or collaborations. I'm always open
-                to connecting!</p>
-        </section>
-        <section class="contacts">
-            <div class="contact">
-                <h3>Address</h3>
-                <p>Addis Ababa University, 4Kilo campus</p>
-            </div>
-            <p>You're welcome to visit or send correspondence to my address for professional inquiries or
-                collaborations. I look forward to connecting!</p>
-        </section>
+        <div class="contact-cards">
+            <section class="contacts">
+                <div class="contact">
+                    <h3>Email</h3>
+                    <p>tsedenyabaze96@gmail.com</p>
+                </div>
+                <p>Feel free to reach out to me with any questions, opportunities, or collaborations. I'd be happy to
+                    connect!</p>
+            </section>
+            <section class="contacts">
+                <div class="contact">
+                    <h3>Phone Number</h3>
+                    <p>0964860447</p>
+                </div>
+                <p>Feel free to call or message me for any inquiries, opportunities, or collaborations. I'm always open
+                    to connecting!</p>
+            </section>
+            <section class="contacts">
+                <div class="contact">
+                    <h3>Address</h3>
+                    <p>Addis Ababa University, 4Kilo campus</p>
+                </div>
+                <p>You're welcome to visit or send correspondence to my address for professional inquiries or
+                    collaborations. I look forward to connecting!</p>
+            </section>
+        </div>
     </main>
     <footer>
         <div>
@@ -58,9 +71,9 @@
                 target="_blank"><img src="images/icons8-linkedin-48.png" alt="LinkedIn Logo"></a>
         </div>
         <p>All Rights Reserved. &copy;2024</p>
-        <img src="images/icons8-person-female-50.png" alt="logo">
+        <img src="images/Woman (1).png" alt="logo" class="logo">
     </footer>
-
+    <script src="script/index.js"></script>
 </body>
 
 </html>
